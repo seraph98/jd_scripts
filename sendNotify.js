@@ -526,8 +526,10 @@ function qywxamNotify(text, desp) {
         re = eval("/" + "账号" + "/ig");
         if (despTmp[i].match(re).length > 1) {
           console.log("通知消息分割不正常，取消企业微信拆分通知。");
-        } else {
+        } else if (despTmp[i].match(re).length == 1) {
           qywxSplitSend(text, despTmp[i], userIdsTmp[accIdx]);
+        } else {
+          continue;
         }
       }
     } else {
