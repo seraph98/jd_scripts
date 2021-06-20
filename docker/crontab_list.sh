@@ -129,3 +129,5 @@
 15 0,12,22 * * * node /scripts/jd_jump.js >> /data/logs/jd_jump.log 2>&1
 #京喜牧场
 15 0,12,22 * * * node /scripts/jd_jxmc.js >> /data/logs/jd_jxmc.log 2>&1
+#京东点点券
+10 0,20 * * * node /scripts/jd_necklace.js >> /data/logs/jd_necklace.log 2>&1
