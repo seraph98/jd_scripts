@@ -37,3 +37,5 @@ WORKDIR /scripts
 ENTRYPOINT ["docker_entrypoint.sh"]
 
 CMD [ "crond" ]
+
+
