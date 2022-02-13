@@ -30,7 +30,6 @@ RUN set -ex \
     && cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
     && chmod +x /usr/local/bin/docker_entrypoint.sh \
 	&& git config --global url."https://gitclone.com/".insteadOf https:// \
-	&& git clone https://github.com/tendermint/tendermint.git \
 
 
 WORKDIR /scripts
