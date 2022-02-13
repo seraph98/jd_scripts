@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 
+
 #获取配置的自定义参数
 if [ -n "$1" ]; then
   run_cmd=$1

@@ -8,7 +8,7 @@ ARG KEY="-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAA
 ENV DEFAULT_LIST_FILE=crontab_list.sh \
     CUSTOM_LIST_MERGE_TYPE=append \
     COOKIES_LIST=/scripts/logs/cookies.list \
-    REPO_URL=git@gitee.com:seraph98/jd_scripts.git \
+    REPO_URL=https://github.com/seraph98/jd_scripts.git \
     REPO_BRANCH=master
 
 RUN set -ex \
@@ -28,7 +28,10 @@ RUN set -ex \
     && npm config set registry https://registry.npm.taobao.org \
     && npm install \
     && cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
-    && chmod +x /usr/local/bin/docker_entrypoint.sh
+    && chmod +x /usr/local/bin/docker_entrypoint.sh \
+	&& git config --global url."https://gitclone.com/".insteadOf https:// \
+	&& git clone https://github.com/tendermint/tendermint.git \
+
 
 WORKDIR /scripts
 
