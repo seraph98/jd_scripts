@@ -29,7 +29,7 @@ RUN set -ex \
     && npm install \
     && cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
     && chmod +x /usr/local/bin/docker_entrypoint.sh \
-	&& git config --global url."https://gitclone.com/".insteadOf https:// \
+	&& git config --global url."https://gitclone.com/".insteadOf https://
 
 
 WORKDIR /scripts
