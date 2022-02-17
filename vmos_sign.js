@@ -1,3 +1,9 @@
+
+if (!process.env.Enable_VMOS || process.env.Enable_VMOS === '0') {
+	console.log("不执行vmos")
+	return
+}
+
 let Env = require('./env')
 let $ = new Env("vmos")
 
