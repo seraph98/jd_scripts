@@ -118,3 +118,8 @@
 # 30 0-21/3 * * * node /scripts/jd_joy_steal.js >> /scripts/logs/jd_joy_steal.log 2>&1
 # # 宠汪汪邀请助力
 # 10 9-20/1 * * * node /scripts/jd_joy_run.js >> /scripts/logs/jd_joy_run.log 2>&1
+
+###-------- vmos --------
+
+# vmos 签到
+33 9,12 * * * node /scripts/vmos_sign.js >> /scripts/logs/vmos_sign.log 2>&1
