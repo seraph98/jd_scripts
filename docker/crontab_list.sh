@@ -122,5 +122,8 @@
 ###-------- vmos --------
 
 # vmos 签到
-33 9,12,16 * * * node /scripts/vmos_sign.js >> /scripts/logs/vmos_sign.log 2>&1
-35 9,12,16 * * * node /scripts/vmos_share.js >> /scripts/logs/vmos_share.log 2>&1
+33 1,2,3 * * * node /scripts/vmos_login.js >> /scripts/logs/vmos_login.log 2>&1
+35 1,2,3 * * * node /scripts/vmos_ad_sendMessage.js >> /scripts/logs/vmos_ad_sendMessage.log 2>&1
+36 1,2,3 * * * node /scripts/vmos_ad_getPoints.js >> /scripts/logs/vmos_ad_getPoints.log 2>&1
+38 1,2,3 * * * node /scripts/vmos_sign.js >> /scripts/logs/vmos_sign.log 2>&1
+40 1,2,3 * * * node /scripts/vmos_share.js >> /scripts/logs/vmos_share.log 2>&1

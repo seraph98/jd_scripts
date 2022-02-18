@@ -1,4 +1,3 @@
-
 if (!process.env.Enable_VMOS || process.env.Enable_VMOS === '0') {
 	console.log("不执行vmos")
 	return
@@ -49,7 +48,6 @@ var options = {
 
 function callback(error, response, body) {
 	if (!error && response.statusCode == 200) {
-		notify.sendNotify(`vmos 分享`, `分享成功, body: ${body}`);
 	} else {
 		notify.sendNotify(`vmos 分享`, `分享失败, error: ${error}, response: ${response}, body: ${body}`);
 	}
