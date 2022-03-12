@@ -26,6 +26,8 @@
 0 0,1,3,5 * * * node /scripts/jd_mall_active.js >> /scripts/logs/jd_mall_active.log 2>&1
 # 京喜领88元红包
 30 1,6,12,21 * * * node /scripts/jd_jxlhb.js >> /scripts/logs/jd_jxlhb.log 2>&1
+# 逛PLUS抽京豆
+18 0 * * * node /scripts/jd_plusLottery.js >> /scripts/logs/jd_plusLottery.log 2>&1
 
 ##############长期活动##############
 # 签到
