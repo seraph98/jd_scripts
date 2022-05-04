@@ -125,3 +125,9 @@
 36 1,2,3 * * * node /scripts/vmos_ad_getPoints.js >> /scripts/logs/vmos_ad_getPoints.log 2>&1
 38 1,2,3 * * * node /scripts/vmos_sign.js >> /scripts/logs/vmos_sign.log 2>&1
 40 1,2,3 * * * node /scripts/vmos_share.js >> /scripts/logs/vmos_share.log 2>&1
+
+
+# 微博相关
+33 1,2,3 * * * node /scripts/weibo/fish.js >> /scripts/logs/weibo/fish.log 2>&1
+33 8,16,23 * * * node /scripts/weibo/clear_garbage.js >> /scripts/logs/weibo/clear_garbage.log 2>&1
+11 8,12,20 * * * node /scripts/weibo/time_package.js >> /scripts/logs/weibo/time_package.log 2>&1
